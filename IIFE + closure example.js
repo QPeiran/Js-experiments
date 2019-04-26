@@ -23,6 +23,13 @@ for (var i = 0; i < 5; i++)
     console.log(j);
 }
 console.log(j);
+
+function myFunction(x) {
+  var z = 5;
+  return (function tryIt(y){return z+x+y;})(2);
+}
+
+document.getElementById("demo").innerHTML = myFunction(4);
 </script>
 
 </body>
