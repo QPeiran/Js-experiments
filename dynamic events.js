@@ -1,4 +1,40 @@
-<!doctype html>
+//plain JS version
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id = "demo">Click the button to make a BUTTON element with text.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+
+<script>
+function myFunction() {
+  var btn = document.createElement("BUTTON");
+  btn.innerHTML = "CLICK ME";
+  btn.id = "test1"
+  document.body.appendChild(btn);
+  btn.addEventListener("click", myFunction2);
+}
+function myFunction2() {
+	document.getElementById("demo").innerHTML = "Hello World!";
+    var test = document.getElementById("test1");
+    console.log(test);
+    test.parentNode.removeChild(test);
+}
+
+</script>
+
+</body>
+</html>
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+// jQurey version
+
+<!doctype html> 
     <html>
         <head>
             <title>Naslov</title>
@@ -7,30 +43,6 @@
                 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
                 crossorigin="anonymous">
             </script>
-            <style>
-                div{
-                    width: 17%;
-                }
-                li{
-                    box-sizing: border-box;
-                    border: 2px solid #fff;
-                    width: 100%;
-                }
-                li button:hover{
-                    cursor: pointer;
-                    transform: scale(1.2, 1.2);
-                    transition: 0.5s;
-                }
-                li .x{
-                    color: red;
-                    background-color: black;
-                    border-radius: 8px;
-                    display: inline-block;
-                    float: right;
-                    text-align: center;
-                    vertical-align: center;
-                }
-            </style>
         </head>
         <body>
             <div>
