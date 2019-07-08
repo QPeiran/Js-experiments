@@ -30,7 +30,7 @@ xhr.onreadystatechange = function () {
 	if (xhr.readyState !== 4) return;
 
 	// Process our return data
-	if (xhr.status >= 200 && xhr.status < 300) {
+	if (xhr.status >= 200 && xhr.status < 300) { //or xhr == 200
 		// What do when the request is successful
 		console.log(JSON.parse(xhr.responseText));
 	}
