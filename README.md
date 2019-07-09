@@ -1,2 +1,2 @@
-# chart-experiments
-chart experiments
+# JS-experiments
+easy to use experiments envo
