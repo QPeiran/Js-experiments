@@ -17,13 +17,13 @@ function loadDoc() {
    		fruit.forEach(function(val){console.log(val);});
     // document.getElementById("demo").innerHTML = this.responseText;
     	console.log("done " + xhttp.readyState + " & " + xhttp.status);
-        console.log(this.responseText);
+        console.log(this.responseText);// sucess!
     }
   };
   xhttp.open("GET", "demo_get.asp", true);//"demo_get.asp" => https://www.w3schools.com/js/demo_get.asp
   xhttp.send();
   console.log("begin " + xhttp.readyState + " & " + xhttp.status);
-  console.log(this.responseText);
+  console.log(this.responseText); // undefined!
 }
 
 
