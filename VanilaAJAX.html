@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+
+<button type="button" onclick="loadDoc()">Request data</button>
+
+<p id="demo"></p>
+ 
+<script>
+var fruit =["apple","orange","peach"];
+var xhttp = new XMLHttpRequest();
+function loadDoc() {
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+   		fruit.forEach(function(val){console.log(val);});
+    // document.getElementById("demo").innerHTML = this.responseText;
+    	console.log("done " + xhttp.readyState + " & " + xhttp.status);
+    }
+  };
+  xhttp.open("GET", "https://www.w3schools.com/js/demo_get.asp", true); //"/demo_get.asp" can be replaced by any "GETable" address
+  console.log("begin " + xhttp.readyState + " & " + xhttp.status);
+}
+
+
+</script>
+
+</body>
+</html>
