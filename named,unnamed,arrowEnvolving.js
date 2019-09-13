@@ -14,7 +14,7 @@ var y = function () {
 console.log(y);
 
 
-z = () => {
+/* (var) */z = () => {  // z is more likely to be a function here
     console.log("I'm z");
     return 2;
 };
