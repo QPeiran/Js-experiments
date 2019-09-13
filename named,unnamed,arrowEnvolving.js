@@ -14,9 +14,17 @@ var y = function () {
 console.log(y);
 
 
-var z = () => {
+z = () => {
     console.log("I'm z");
     return 2;
 };
 
-console.log(z());
+console.log(z()); //proper IIFE
+
+/*var z = () => {
+    console.log("I'm z");
+    return 2;
+}();
+
+console.log(z); // wrong IIFE
+*/
