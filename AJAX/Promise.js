@@ -1,4 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
 
+<h2>The XMLHttpRequest Object</h2>
+
+<button type="button" onclick="loadDoc()">Request data</button>
+
+<p id="demo"></p>
+ 
+<script>
+var xhttp = new XMLHttpRequest();
+function loadDoc() {
 function get(url)
   {
     return new Promise(function(resolve,reject)
@@ -8,7 +20,9 @@ function get(url)
                           xhttp.onload = function()
                           {
                             if (xhttp.status == 200)
-                            {resolve(JSON.parse(xhttp.response));}
+                            {
+                             resolve(JSON.parse(xhttp.response));                      
+                            }
                             else
                             {reject(xhttp.statusText);}
                           };
@@ -17,3 +31,17 @@ function get(url)
                           xhttp.send();
                         });
   }
+
+
+var promise = get("https://jsonplaceholder.typicode.com/todos/1");
+
+promise.then(function(value){console.log(value);});
+
+promise.then(function(value){console.log("okay" + value);}) //sigh..cause you concat string with [Object]
+	   .catch(function(error){console.log(error);});
+}
+
+</script>
+
+</body>
+</html>
