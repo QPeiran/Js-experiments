@@ -28,3 +28,9 @@ console.log(z()); //proper IIFE
 
 console.log(z); // wrong IIFE
 */
+var reject;
+
+onload=(reject) => {  // z is more likely to be a function here
+    console.log("I'm anonymous");
+};
+onload(reject);
