@@ -12,8 +12,10 @@
 var fruit =["apple","orange","peach"];
 var xhttp = new XMLHttpRequest();
 function loadDoc() {
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
+  xhttp.onreadystatechange = function() 
+  {
+    if (this.readyState == 4 && this.status == 200) 
+    {
    		fruit.forEach(function(val){console.log(val);});
     // document.getElementById("demo").innerHTML = this.responseText;
     	console.log("done " + xhttp.readyState + " & " + xhttp.status);
