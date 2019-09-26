@@ -39,9 +39,10 @@ promise.then(function(value){console.log(value);});
 
 promise.then(function(value){console.log("okay" + value);}) //sigh..cause you concat string with [Object]
 	   .catch(function(error){console.log(error);});
+promise.then(value => {document.getElementById("demo").innerHTML = "Hello! " + value.title});
 }
 
-promise.then(value => {document.getElementById("demo").innerHTML = "Hello! " + value.title});
+
 </script>
 
 </body>
